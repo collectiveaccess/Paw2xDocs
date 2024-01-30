@@ -6,14 +6,13 @@ sidebar_position: 1
 
 Intro here
 
-## Getting Started
+## Getting Started 
 
 ...
 
 ```bash
 npm init docusaurus@latest my-website classic
 ```
-
 
 
 The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.

@@ -4,6 +4,7 @@ sidebar_position: 1
 
 # About
 
-Description of Contact page controller
-
-Options controlling display of the contact form are set in the contact.conf file in the current theme. If no contact.conf file is defined in the current theme, settings defined in the default theme will be used.
+The "Contact" module allows integration of email "contact us" forms into a Pawtucket site. Forms
+may have any number of fields, including text, email and drop-down values. Specific fields may be 
+marked as required. To prevent nuisance form submissions by automated SPAM'ing bots optional integration
+with Google's reCaptcha service is provided.

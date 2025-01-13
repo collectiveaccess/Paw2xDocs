@@ -2,21 +2,19 @@
 sidebar_position: 1
 ---
 
-# Intro
+# About Pawtucket
 
-Intro here
+Pawtucket is the optional, public web-access tool for digital publication and discovery for CollectiveAccess. The “front–end” to Providence’s “back-end” configuration, Pawtucket has been designed to handle various aspects relating to data modeling, workflow management, web publishing, granular control, and digital preservation for a variety of collections. While Providence provides a relational approach to cataloging that allows users to catalogue almost anything in any way, Pawtucket offers dynamic web presentation tools for publicly accessible collections that can bring an archive to life.  While Pawtucket’s main purpose is to display data for digital publication and discovery of collections, Pawtucket also provides a multi-faceted storytelling medium for a variety of collections. 
 
-## Getting Started 
+Pawtucket is structured around several modules that can be customized to suit a variety of presentation needs. How each module is customized determines how data is presented. Pawtucket provides many features for displaying, finding and interacting with collections information, including:
 
-...
+* Responsive, mobile-friendly interface based upon [Bootstrap](https://getbootstrap.com/)
+* Full text search
+* Highly configurable search and browse interfaces for all record types
+* Ability to browse within search results (aka “refine your search”)
+* Configurable detail displays for collection objects and all authorities- you can show as much or as little information from your database as you want
+* Built-in support for “galleries” - simple online exhibitions using curator-defined sets
+* Built-in support for user-created comments and presentations
+* Export search and browse results to formatted PDFs, Excel and PowerPoint
 
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+The base installation for Pawtucket includes a default theme that supports all functionality in a plain white design. However, Pawtucket is meant to be customized. By simply editing the CSS stylesheets, system header, and system footer templates, you can have Pawtucket fit into most any existing design scheme. More complex customization can be achieved by editing Pawtucket configuration, modifying its templates, and extending its functionality through theme-specific controllers, helpers and views.

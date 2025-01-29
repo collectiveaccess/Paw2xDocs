@@ -9,7 +9,7 @@ sidebar_position: 2
 	- When creating a new theme, keep in mind all views and css in the default theme are the base you are building upon.  The views in your theme will be used instead of what is in default, but you ONLY need to have the files you are making modifications to in your theme.  Pawtucket will first look for views in the configured theme and fall back to those in default when not avaiable.  For this reason, there is no need to copy all the views from the default theme into your theme.
     
 
-## Creating a new theme
+## Creating a New Theme
     - Create a copy of the copyme theme in the themes directory, giving it a new name. This will serve as a good starting point for your new theme. Remember when views are not in a theme, the views in the default theme are used.
     - Copy the configuration folder from the default theme into the new theme.  It is located in /themes/default/config
     - Configure your new theme to be used by Pawtucket.  In /setup.php, set <code>$_CA_THEMES_BY_DEVICE = ['_default_' 	=> 'yourTheme'];</code>
@@ -24,22 +24,22 @@ sidebar_position: 2
     - The default theme's Bootstrap sass variables are being set in `themes/default/css/_bs_variables.scss`.  You can override these variables or any boostrap variables in the configured theme's `_bs_variables_theme.scss` to style various bootstrap components and general styling across the site.  <br/>Note: Do not include !default in variable declarations in your theme's `_bs_variables.scss` if they've already been defined in `themes/default/css/_bs_variables.scss`.
     - More custom styling should be done in `theme.scss` which is the last loaded stylesheet. 
 
-## Setting a Logo in the header
+## Setting a Logo in the Header
 
     - Add your logo to the assets/graphics directory
     - Go into views/pageFormat directory and into the `pageHeader.php` file
     - Find the caGetThemeGraphic function, and change it to link to your logo in the graphics directory
 
-## Setting up the Front page
+## Setting up the Front Page
 
-### Adding an image to the parallax on the front page
+### Adding an Image to the Parallax on the Front Page
     - Add the image in the assets/graphics directory
 
     - In the main.scss file, go to the `.parallax` style and change the background image url to the image you've added to the graphics directory
 
     - If you want a variety of images to appear at random for the parallax, you can set the styles `.hero1`, `.hero2` and `.hero3` to images of your choice.
 
-### Explore the archive
+### Explore the Archive
     - As a default this section will link to the Objects Browse, Gallery and Collections landing pages. This can be changed in the `front_page_html.php` file in the views/Front directory. 
 
     - You are also able to change the images used for these by adding them to the graphics directory and alter the caGetThemeGraphic function to link to the image.
@@ -146,7 +146,7 @@ sidebar_position: 2
     | **ca_places_default_html**  |   |  
     | **ca_entities_default_html**  |   |  
 
-### Adding additional pages
+### Adding Additional Pages
 
     - You are able to add additional detail views. For instance in cases where a record may have multiple types, such as objects, where there is a type called 'photograph' and a type called 'postcard'. You may want to create separate detail pages for those objects instead of encompassing all the metadata in a single default page. To do so you can create a copy of the default detail page and rename it to include the type code of the record. For example: `ca_objects_photograph_html` and `ca_objects_postcard_html`. 
 

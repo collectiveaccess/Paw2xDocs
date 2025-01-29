@@ -5,7 +5,7 @@ sidebar_position: 2
 # Configuration
 
 
-## General options
+## General Options
 
 | Option Name   | Explanation  |
 | --- | --- | 
@@ -13,7 +13,7 @@ sidebar_position: 2
 | evaluation_mode |  Controls how bans are evaluated. Must be either `absolute` or `average`. In absolute mode, ban probabilities returned by enabled plugins are summed. If the sum exceeds the threshold the user is banned. In average mode if the average probability returned by enabled plugins exceeds the threshold the user is banned. | 
 | threshold |  The numeric ban threshold. If the ban probabilities returned by enabled plugins exceed this value the user is banned. This value must be a number between zero and 1. | 
 
-## Plugin configuration
+## Plugin Configuration
 
 Tests are implemented as plugins. Each plugin may be configured in the `ban_hammer.conf` configuration file under an entry in the form `plugins.<plugin name>`. The value of the entry is an object defining the plugin-specific options described below. A typical entry for a plugin (in this case the IPAddress plugin) would appear in `ban_hammer.conf` in this form:
 
@@ -31,7 +31,7 @@ plugins.IPAddress = {
 Tests are implemented as plugin classes stored in the `app/lib/Plugins/BanHammer/` directory. You can add additional tests by dropping new classes into this directory.
 :::
 
-## IPAddress plugin
+## IPAddress Plugin
 
 The IPAddress plugin bans users based upon their IP address. Use it to block potentially malicious IP ranges.
 
@@ -45,7 +45,7 @@ Currently only IPv4 addresses are supported
 |  banned_ip_addresses |  A list of ip addresses to bans. Wildcards may be used to match ranges. For example:  10.55.\*.\* will match any IP address in the 10.55 class-B network. | 
 
 
-## UserAgent plugin
+## UserAgent Plugin
 
 The UserAgent plugin bans users based upon the user agent string sent with their request. The user agent should identify the software used to connection, whether that is a browser, a scripting extension or a bot. 
 
@@ -63,7 +63,7 @@ Several projects maintain online lists of abusive user agents. You can employ th
 | exclude_useragents | List of user agent patterns to always pass (eg. exclude from useragent list)  | 
 | useragent_list_force_reload | Force reload of user agent list regardless of ttl  | 
 
-## RequestFrequency plugin
+## RequestFrequency Plugin
 
 The RequestFrequency plugin bans users connecting to the site too quickly. Frequent connections may indicate an abusive bot or scraper.
 
@@ -73,7 +73,7 @@ The RequestFrequency plugin bans users connecting to the site too quickly. Frequ
 |  frequency_threshold |  Maximum number of page loads per second before user is banned | 
 |  ban_probability |  Probability of ban on test failure. Must be a number between 0 and 1.0, where 1.0 indicates an absolute ban. | 
 
-## ExportFrequency plugin
+## ExportFrequency Plugin
 
 The ExportFrequency plugin bans users requesting PDF or Excel data exports too quickly or frequently. Frequent exports often indicate an abusive bot or scraper.
 
@@ -84,7 +84,7 @@ The ExportFrequency plugin bans users requesting PDF or Excel data exports too q
 |  allowed_exports_per_session |  Maximum number of exports in a session user is banned. Set to zero for no limit. | 
 |  ban_probability |  Probability of ban on test failure. Must be a number between 0 and 1.0, where 1.0 indicates an absolute ban. | 
 
-## CAPTCHA support
+## CAPTCHA Support
 
 The tests provided by the `Ban` module are imperfect and can sometimes ban legitimate users. By default bans last for a period of time, typically one day. To allow legitimate users to un-ban themselves the module can display a Google CAPTCHA puzzle to banned users. Users successfully completing the CAPTCHA are placed on a "no ban" list for a period of time (also usually one day).
 

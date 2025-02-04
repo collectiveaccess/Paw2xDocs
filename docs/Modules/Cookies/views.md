@@ -14,15 +14,13 @@ The `form_manage_html.php` file provides a view for managing cookie preferences.
 
 | Variable                   | Description                                                            |
 |----------------------------|------------------------------------------------------------------------|
-| `$config`                  | Stores the cookie configuration settings.                              |
-| `$text`                    | Holds the text to be displayed in the cookie banner.                   |
-
+| `caGetCookiesConfig`       | Stores the cookie configuration settings.                              |
+| `cookiesBannerGlobalValue` or `cookiesBannerText`| Holds the text to be displayed in the cookie banner.|
 
 ## Variables for `form_manage_html.php`
 
 | Variable                   | Description                                                           |
 |----------------------------|-----------------------------------------------------------------------|
-| `$cookies_by_category`     | Stores the different cookie categories and their settings.            |
-| `$config`                  | Stores the cookie configuration settings.                             |
-| `$intro`                   | The introductory text shown at the top of the form.                   |
-
+| `cookiesByCategory`        | Stores the different cookie categories and their settings.            |
+| `config`                   | Stores the cookie configuration settings.                             |
+| `cookiesFormIntro`         | The introductory text shown at the top of the form.                   |

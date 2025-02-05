@@ -12,6 +12,12 @@ The `detail.conf` file configures the behavior of detail pages for various recor
 | `displayName`       | The user-friendly label for the record type.         | `displayName = _(Objects)` |
 | `table`             | Specifies the database table for the record type     | `table = ca_objects`       |
 | `restrictToTypes`   | Restricts detail pages to specific types within the record type.   | `restrictToTypes = [a, b]` |
+| `media_review_enabled` | Enables or disables the media review interface (`0` = No `1`= Yes) | `media_review_enabled = 1` |
+| `media_review_element` | The element code for if media has been reviewed or not | `media_review_element = ca_objects.media_reviewed` |
+| `media_review_type` | The type for the record in which media is being reviewed | `media_review_type = artwork` |
+| `media_review_complete_value` | The value the user wants set if the media review has been completed | `media_review_complete_value = yes` |
+| `media_review_incomplete_value` | The value the user wants set if the media review has NOT been completed | `media_review_incomplete_value = no` |
+| `deleted_media_directory` | The directory where deleted media resides | `deleted_media_directory = /deleted-media` |
 | `nextLink`          | Template for the "Next" navigation link.             | `nextLink = Next <i class='bi bi-chevron-right'></i>`  |
 | `previousLink`      | Template for the "Previous" navigation link.         | `previousLink = <i class='bi bi-chevron-left'></i> Previous`   |
 | `resultsLink`       | Template for the "Back" navigation link.  | `resultsLink = <i class='bi-chevron-double-up'></i> Back`   |
